@@ -1,103 +1,151 @@
+import React from "react";
+import ProjectCard from "@/components/ProjectCard";
+import { uiProjects } from "@/data/mock";
+import { Palette, Monitor, Smartphone, Clock, DollarSign} from "lucide-react";
+import Discord from "@/assets/discord-white-icon.webp"
 import Image from "next/image";
 
-export default function Home() {
+const Home = () => {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-black pt-16">
+      {/* Subtle Background Elements */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-600/5 rounded-full blur-3xl" />
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+        {/* Header Section */}
+        <div className="text-center mb-12 sm:mb-16">
+          <div className="flex justify-center mb-6">
+            <div className="bg-gradient-to-br from-purple-500 to-purple-700 p-4 rounded-2xl shadow-[0_0_30px_rgba(147,51,234,0.3)]">
+              <Palette className="w-8 h-8 text-white" />
+            </div>
+          </div>
+
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-400 via-purple-300 to-purple-500 bg-clip-text text-transparent mb-6">
+            Spidy UI Designs
+          </h1>
+
+          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
+          I craft clean, intuitive, and immersive user experiences for Roblox games blending creativity and function. 
+          With over 2+ years of experience, I deliver designs that combine aesthetic appeal with seamless functionality.
+          </p>
+
+          {/* Stats Cards */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 mt-8 sm:mt-12 max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-gray-900 to-black rounded-xl p-4 sm:p-6 border border-purple-500/20">
+              <Smartphone className="w-5 h-5 sm:w-6 sm:h-6 text-purple-400 mx-auto mb-2" />
+              <div className="text-xl sm:text-2xl font-bold text-white">Mobile</div>
+              <div className="text-xs sm:text-sm text-purple-300">Friendly</div>
+            </div>
+            <div className="bg-gradient-to-br from-gray-900 to-black rounded-xl p-4 sm:p-6 border border-purple-500/20">
+              <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-purple-400 mx-auto mb-2" />
+              <div className="text-xl sm:text-2xl font-bold text-white">Fast</div>
+              <div className="text-xs sm:text-sm text-purple-300">Delivery</div>
+            </div>
+            <div className="bg-gradient-to-br from-gray-900 to-black rounded-xl p-4 sm:p-6 border border-purple-500/20">
+              <Palette className="w-5 h-5 sm:w-6 sm:h-6 text-purple-400 mx-auto mb-2" />
+              <div className="text-xl sm:text-2xl font-bold text-white">Clean</div>
+              <div className="text-xs sm:text-sm text-purple-300">Designs</div>
+            </div>
+            <div className="bg-gradient-to-br from-gray-900 to-black rounded-xl p-4 sm:p-6 border border-purple-500/20">
+              <Monitor className="w-5 h-5 sm:w-6 sm:h-6 text-purple-400 mx-auto mb-2" />
+              <div className="text-xl sm:text-2xl font-bold text-white">Custom</div>
+              <div className="text-xs sm:text-sm text-purple-300">Icons</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-16">
+          {uiProjects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
+
+        {/* Prices Section */}
+        <div className="text-center my-16">
+          <h2 className="text-3xl font-bold text-white mb-8">Pricing</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Design Pricing */}
+            <div className="bg-gradient-to-br from-gray-900 to-black p-6 rounded-xl border border-purple-500/20 shadow-lg">
+              <div className="flex items-center gap-2 mb-4">
+                <DollarSign className="w-6 h-6 text-purple-400" />
+                <h3 className="text-2xl font-bold text-white">UI Design</h3>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Starting at <span className="font-bold text-purple-400">$5</span> per frame.
+              </p>
+              <p className="text-gray-400 text-sm">
+              You will recieve all the images as PNG or figma file. <br></br>(Extra for custom icons)
+              </p>
+            </div>
+
+            {/* Implementation Pricing */}
+            <div className="bg-gradient-to-br from-gray-900 to-black p-6 rounded-xl border border-purple-500/20 shadow-lg">
+              <div className="flex items-center gap-2 mb-4">
+                <Monitor className="w-6 h-6 text-purple-400" />
+                <h3 className="text-2xl font-bold text-white">Importing in Roblox</h3>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Between <span className="font-bold text-purple-400">$2 - $8</span> per frame.
+              </p>
+              <p className="text-gray-400 text-sm">
+                You will recieve RBXM file of your UI.
+                
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Contact Me Section */}
+        <div className="text-center my-16">
+          <h2 className="text-3xl font-bold text-white mb-4">Contact Me</h2>
+          <p className="text-gray-300 mb-6">
+            Have a project in mind? Let’s bring it to life! Reach out to me on Discord.
+          </p>
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://discord.com/users/spidy9544" // replace with your Discord URL
             target="_blank"
             rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 transition px-6 py-3 rounded-full text-white font-medium"
           >
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+            src={Discord}
+            alt="discord logo"
+            className="w-5 h-5"/>
+            Contact Me on Discord
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        {/* Skills Section */}
+        <div className="text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8">Technical Expertise</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 max-w-5xl mx-auto">
+            {[
+              'Roblox Studio GUI',
+              'Adobe Illustrator',
+              'Adobe Photoshop',
+              'Figma',
+              'Mobile Optimization',
+              'UI Animation',
+              'Color Theory',
+              'UX Research',
+              'Wireframing',
+            ].map((skill, index) => (
+              <div
+                key={index}
+                className="bg-gradient-to-br from-gray-900 to-black rounded-lg p-3 sm:p-4 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 hover:scale-105"
+              >
+                <span className="text-purple-200 font-medium text-sm">{skill}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default Home;
