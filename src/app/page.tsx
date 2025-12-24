@@ -1,7 +1,8 @@
 import React from "react";
-import ProjectCard from "@/components/ProjectCard";
-import { uiProjects } from "@/data/mock";
-import { Palette, Monitor, Smartphone, Clock, DollarSign} from "lucide-react";
+import ProjectCard2 from "@/components/ProjectCard";
+import ProjectCard from "@/components/ProjectCard2";
+import { uiProjects, uiProjects2 } from "@/data/mock";
+import { Palette, Monitor, Smartphone, Clock, DollarSign } from "lucide-react";
 import Discord from "@/assets/discord-white-icon.webp"
 import Image from "next/image";
 
@@ -28,8 +29,8 @@ const Home = () => {
           </h1>
 
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
-          I craft clean, intuitive, and immersive user experiences for Roblox games blending creativity and function. 
-          With over 2+ years of experience, I deliver designs that combine aesthetic appeal with seamless functionality.
+            I craft clean, intuitive, and immersive user experiences for Roblox games blending creativity and function.
+            With over 2+ years of experience, I deliver designs that combine aesthetic appeal with seamless functionality.
           </p>
 
           {/* Stats Cards */}
@@ -59,6 +60,9 @@ const Home = () => {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-16">
+          {uiProjects2.map((project, index) => (
+            <ProjectCard key={index} project={project} />
+          ))}
           {uiProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
@@ -78,7 +82,7 @@ const Home = () => {
                 Starting at <span className="font-bold text-purple-400">$5</span> per frame.
               </p>
               <p className="text-gray-400 text-sm">
-              You will recieve all the images as PNG or figma file. <br></br>(Extra for custom icons)
+                You will recieve all the images as PNG or figma file. <br></br>(Extra for custom icons)
               </p>
             </div>
 
@@ -93,7 +97,7 @@ const Home = () => {
               </p>
               <p className="text-gray-400 text-sm">
                 You will recieve RBXM file of your UI.
-                
+
               </p>
             </div>
           </div>
@@ -112,9 +116,9 @@ const Home = () => {
             className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 transition px-6 py-3 rounded-full text-white font-medium"
           >
             <Image
-            src={Discord}
-            alt="discord logo"
-            className="w-5 h-5"/>
+              src={Discord}
+              alt="discord logo"
+              className="w-5 h-5" />
             Contact Me on Discord
           </a>
         </div>

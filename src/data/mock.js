@@ -57,6 +57,34 @@ export const uiProjects = [
   }
 ];
 
+export const uiProjects2 = [
+  {
+    title: "Pirates of the Sea",
+    year: 2025,
+    description:
+      "A rustic, atmospheric, and nautical UI pack designed for pirate adventure and RPG games. Includes parchment backgrounds, weathered wood buttons, golden typography, and minimalistic HUD elements",
+    technologies: ["Photoshop", "Game UI", "2D Design"],
+    images: [
+      "https://res.cloudinary.com/dwh1agpxk/image/upload/v1766394174/ui/gqzgucr3qqgzcfqtk1ip.png",
+      "https://res.cloudinary.com/dwh1agpxk/image/upload/v1766393989/ui/nwqgzmbo3di89nxqkavs.png",
+      "https://res.cloudinary.com/dwh1agpxk/image/upload/v1766393992/ui/pj3qsstf2qpy5uu7hiw5.png",
+    ],
+    // featured: true,
+  },
+  {
+    title: "Gone Rogue Chapter 2",
+    year: 2025,
+    description:
+      "A COD inspired modern, tactical, and gritty UI pack designed for FPS and military shooter games. Includes sleek loadout menus, weapon selection cards, minimalist stat bars, and semi-transparent panels.",
+    technologies: ["Photoshop","Illustrator", "Game UI", "2D Design"],
+    images: [
+      "https://res.cloudinary.com/dwh1agpxk/image/upload/v1766392122/ui/r6dlifemzdclu3xqk8ql.png",
+      "https://res.cloudinary.com/dwh1agpxk/image/upload/v1766392123/ui/wqu7jgqkdquxlxyn0vuk.png",
+      "https://res.cloudinary.com/dwh1agpxk/image/upload/v1766392113/ui/gpwlgbwvznctwoh9thxe.png",
+      "https://res.cloudinary.com/dwh1agpxk/image/upload/v1766392117/ui/dkbqhotghvb6suypm2nt.png",
+    ],
+  },
+];
 
   
   export const scriptingProjects = [

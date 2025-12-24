@@ -43,6 +43,7 @@ export default function Home() {
       }
 
       setUrls(uploadedUrls);
+      setFiles(null)
     } catch (err: any) {
       console.error(err);
       setError("Upload failed");

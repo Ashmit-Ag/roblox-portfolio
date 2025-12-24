@@ -13,14 +13,16 @@ const Modal: React.FC<ModalProps> = ({ open, onClose, children }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
-      <div className="bg-gradient-to-br from-gray-900 to-black rounded-xl border border-purple-500/20 p-6 relative max-w-3xl w-full">
+      <div className="flex justify-center items-center bg-gradient-to-br from-gray-900 to-black rounded-xl border border-purple-500/20 p-6 relative max-w-7xl w-full">
         <button
           onClick={onClose}
-          className="bg-red-600 rounded absolute top-2 right-2 text-white hover:text-purple-300 cursor-pointer"
+          className="bg-red-600 rounded absolute top-2 right-2 text-white hover:text-purple-300 cursor-pointer z-2"
         >
           <X className="w-7 h-7" />
         </button>
-        {children}
+        <div>
+          {children}
+        </div>
       </div>
     </div>
   );

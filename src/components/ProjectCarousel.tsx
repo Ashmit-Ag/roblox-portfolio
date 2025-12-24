@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 
 type ProjectCarouselProps = {
   images: string[],
@@ -30,11 +31,13 @@ const ProjectCarousel = ({ images, title }: ProjectCarouselProps) => {
   return (
     <div className="relative w-full h-80 rounded-lg overflow-hidden group">
       {/* Main Image */}
-      <div className="relative w-full h-full">
-        <img
+      <div className="relative w-full h-full aspect-[16/9]">
+        <Image
           src={images[currentIndex]}
+          height={1080}
+          width={1920}
           alt={`${title} - Image ${currentIndex + 1}`}
-          className="w-full h-full object-cover transition-transform duration-500"
+          className="w-full object-cover transition-transform duration-500"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-purple-900/60 via-transparent to-transparent" />
       </div>
