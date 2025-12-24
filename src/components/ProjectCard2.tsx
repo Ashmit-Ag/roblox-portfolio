@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import Modal from "@/components/Modal";
 import { Calendar, Star, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import SmartImage from "./SmartImage";
 
 interface Project {
   title: string;
@@ -58,13 +59,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, showVideos = false }
 
         {/* Image Area */}
         <div className="relative overflow-hidden">
-          <Image
+          <SmartImage
             key={animKey}
-            height={1080}
-            width={1920}
             src={project.images[currentIndex]}
             alt={project.title}
-            className="w-full h-full aspect-[16/9] object-cover transition-all duration-500 ease-out animate-fade-slide"
+            width={960}
+            height={720}
+            className="w-full aspect-[16/9] object-cover animate-fade-slide"
           />
 
           {/* Controls */}
@@ -119,15 +120,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, showVideos = false }
       {/* MODAL */}
       <Modal open={modalOpen} onClose={() => setModalOpen(false)}>
         <div className="relative flex flex-col items-center gap-6 pt-10">
-          <div className="relative max-w-6xl w-full overflow-hidden">
-            <Image
+          <div className="relative max-w-6xl w-full min-h-96 overflow-hidden">
+            <SmartImage
               key={`modal-${animKey}`}
-              width={1920}
-              height={1080}
               src={project.images[currentIndex]}
               alt={project.title}
-              className="w-full object-contain rounded-lg transition-all duration-500 animate-fade-slide"
+              width={960}
+              height={720}
+              className="w-full object-contain rounded-lg animate-fade-slide"
+              priority
             />
+
 
             {totalImages > 1 && (
               <>

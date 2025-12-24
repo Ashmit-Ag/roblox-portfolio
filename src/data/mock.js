@@ -72,7 +72,7 @@ export const uiProjects2 = [
     // featured: true,
   },
   {
-    title: "Gone Rogue Chapter 2",
+    title: "Gone Rogue Chapter 1",
     year: 2025,
     description:
       "A COD inspired modern, tactical, and gritty UI pack designed for FPS and military shooter games. Includes sleek loadout menus, weapon selection cards, minimalist stat bars, and semi-transparent panels.",

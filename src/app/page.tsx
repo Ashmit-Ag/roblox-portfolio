@@ -1,5 +1,5 @@
 import React from "react";
-import ProjectCard2 from "@/components/ProjectCard";
+// import ProjectCard2 from "@/components/ProjectCard";
 import ProjectCard from "@/components/ProjectCard2";
 import { uiProjects, uiProjects2 } from "@/data/mock";
 import { Palette, Monitor, Smartphone, Clock, DollarSign } from "lucide-react";
