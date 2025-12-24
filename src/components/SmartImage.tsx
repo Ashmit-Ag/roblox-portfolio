@@ -24,10 +24,10 @@ const SmartImage: React.FC<SmartImageProps> = ({
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <div className="overflow-hidden w-full">
+    <div className="respective overflow-hidden h-full aspect-[16/9]">
       {/* Mock / Skeleton */}
       {!loaded && (
-        <div className="bg-[linear-gradient(110deg,#1f2937,45%,#374151,55%,#1f2937)] bg-[length:200%_100%] animate-[shimmer_1.5s_infinite] sm:h-96 h-64 aspect-[16/9]" />
+        <div className="absolute inset-0 bg-[linear-gradient(110deg,#1f2937,45%,#374151,55%,#1f2937)] bg-[length:200%_100%] animate-[shimmer_1.5s_infinite] " />
       )}
 
       {/* Real image */}

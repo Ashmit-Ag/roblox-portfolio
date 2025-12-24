@@ -58,14 +58,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, showVideos = false }
         )}
 
         {/* Image Area */}
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden aspect-[16/9]">
           <SmartImage
             key={animKey}
             src={project.images[currentIndex]}
             alt={project.title}
             width={960}
             height={720}
-            className="w-full aspect-[16/9] object-cover animate-fade-slide"
+            className="w-full object-cover animate-fade-slide"
           />
 
           {/* Controls */}
@@ -120,7 +120,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, showVideos = false }
       {/* MODAL */}
       <Modal open={modalOpen} onClose={() => setModalOpen(false)}>
         <div className="relative flex flex-col items-center gap-6 pt-10">
-          <div className="relative max-w-6xl w-full min-h-96 overflow-hidden">
+          <div className="relative max-w-6xl w-full min-h-96 overflow-hidden aspect-[16/9]">
             <SmartImage
               key={`modal-${animKey}`}
               src={project.images[currentIndex]}
