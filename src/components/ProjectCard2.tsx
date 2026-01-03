@@ -111,7 +111,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, showVideos = false }
       {/* MODAL */}
       <Modal open={modalOpen} onClose={() => setModalOpen(false)}>
         <div className="relative flex flex-col items-center gap-6 pt-10">
-          <div className="relative max-w-6xl w-full min-h-96 overflow-hidden aspect-[16/9]">
+          <div className="relative max-w-6xl w-full overflow-hidden aspect-[16/9]">
             <SmartImage
               key={`modal-${animKey}`}
               src={project.images[currentIndex]}
