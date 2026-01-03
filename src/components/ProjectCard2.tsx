@@ -1,22 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
 // import ProjectCarousel from "@/components/ProjectCarousel";
 // import VideoPlayer from "@/components/VideoPlayer";
+import React, { useState } from "react";
 import Modal from "@/components/Modal";
 import { Calendar, Star, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
-import Image from "next/image";
 import SmartImage from "./SmartImage";
+import { Project } from "@/types";
 
-interface Project {
-  title: string;
-  year: number | string;
-  description: string;
-  technologies: string[];
-  images: string[];
-  videos?: string[];
-  featured?: boolean;
-}
 
 interface ProjectCardProps {
   project: Project;

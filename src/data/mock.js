@@ -24,6 +24,17 @@ export const uiProjects = [
   },
   {
     id: 3,
+    title: "Pixel Craft",
+    description: "A playful, blocky, pixel styled UI crafted for relaxing games, incorporating candy like cute panels, and cartoony look.",
+    images: [
+      "https://res.cloudinary.com/dwh1agpxk/image/upload/v1767444623/ui/tpz0tenaqebmyvimbbza.png"
+    ],
+    technologies: ["Photoshop", "Illustrator"],
+    year: "2025",
+    featured: false
+  },
+  {
+    id: 4,
     title: "Sci-Fi Battle Arena UI",
     description: "A futuristic neon-style UI with a space theme, offering immersive HUD designs, weapon monitoring, ability trackers, and dynamic visual effects tailored for sci-fi battle arenas.",
     images: [
@@ -34,7 +45,7 @@ export const uiProjects = [
     featured: false
   },
   {
-    id: 4,
+    id: 5,
     title: "Pastel Styled Raise A Child UI",
     description: "A charming UI with custom icons, buttons, and background patterns for life simulation games, designed to deliver a warm aesthetic while enhancing usability and player immersion.",
     images: [
@@ -45,7 +56,7 @@ export const uiProjects = [
     featured: false
   },
   {
-    id: 5,
+    id: 6,
     title: "Studs Style Simulator UI",
     description: "A modern studs-style incremental UI designed for simulator games, offering clean HUD layouts, real-time progress tracking, resource management panels, and engaging visual design.",
     images: [
@@ -63,7 +74,7 @@ export const uiProjects2 = [
     year: 2025,
     description:
       "A rustic, atmospheric, and nautical UI pack designed for pirate adventure and RPG games. Includes parchment backgrounds, weathered wood buttons, golden typography, and minimalistic HUD elements",
-    technologies: ["Photoshop", "Game UI", "2D Design"],
+    technologies: ["Photoshop", "Illustrator", "Realistic Design"],
     images: [
       "https://res.cloudinary.com/dwh1agpxk/image/upload/v1766394174/ui/gqzgucr3qqgzcfqtk1ip.png",
       "https://res.cloudinary.com/dwh1agpxk/image/upload/v1766393989/ui/nwqgzmbo3di89nxqkavs.png",
@@ -76,12 +87,24 @@ export const uiProjects2 = [
     year: 2025,
     description:
       "A COD inspired modern, tactical, and gritty UI pack designed for FPS and military shooter games. Includes sleek loadout menus, weapon selection cards, minimalist stat bars, and semi-transparent panels.",
-    technologies: ["Photoshop","Illustrator", "Game UI", "2D Design"],
+    technologies: ["Photoshop","Illustrator", "Realistic Design"],
     images: [
       "https://res.cloudinary.com/dwh1agpxk/image/upload/v1766392122/ui/r6dlifemzdclu3xqk8ql.png",
       "https://res.cloudinary.com/dwh1agpxk/image/upload/v1766392123/ui/wqu7jgqkdquxlxyn0vuk.png",
       "https://res.cloudinary.com/dwh1agpxk/image/upload/v1766392113/ui/gpwlgbwvznctwoh9thxe.png",
-      "https://res.cloudinary.com/dwh1agpxk/image/upload/v1766392117/ui/dkbqhotghvb6suypm2nt.png",
+      "https://res.cloudinary.com/dwh1agpxk/image/upload/v1766392117/ui/dkbqhotghvb6suypm2nt.png"
+    ],
+  },
+  {
+    title: "Central Protocol",
+    year: 2025,
+    description:
+      "A modern, tactical, and gritty UI pack designed for FPS and military shooter games. Includes sleek loadout menus, weapon selection cards, minimalist stat bars, and semi-transparent panels.",
+    technologies: ["Photoshop","Illustrator", "Realistic Design"],
+    images: [
+      "https://res.cloudinary.com/dwh1agpxk/image/upload/v1767444246/ui/mkqzd6vaxsowciftg9nk.png",
+      "https://res.cloudinary.com/dwh1agpxk/image/upload/v1767444269/ui/jukbrglbx4ok6jqronri.png",
+      "https://res.cloudinary.com/dwh1agpxk/image/upload/v1767444267/ui/w0e85qdnneiz061bicqv.png"
     ],
   },
 ];

@@ -1,10 +1,11 @@
-import React from "react";
 // import ProjectCard2 from "@/components/ProjectCard";
-import ProjectCard from "@/components/ProjectCard2";
-import { uiProjects, uiProjects2 } from "@/data/mock";
+// import ProjectCard from "@/components/ProjectCard2";
+// import { uiProjects, uiProjects2 } from "@/data/mock";
+
 import { Palette, Monitor, Smartphone, Clock, DollarSign } from "lucide-react";
 import Discord from "@/assets/discord-white-icon.webp"
 import Image from "next/image";
+import UiGrid from "@/components/UiGrid";
 
 const Home = () => {
   return (
@@ -59,14 +60,15 @@ const Home = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-16">
+        {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-16">
           {uiProjects2.map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}
           {uiProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
-        </div>
+        </div> */}
+        <UiGrid/>
 
         {/* Prices Section */}
         <div className="text-center my-16">
